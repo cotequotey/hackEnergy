@@ -1,0 +1,103 @@
+h1 {
+    color: #32CD32;
+    font-size: 200%;
+}
+
+#flashes { 
+    color: pink;
+    font-size: large;
+	font-style: italic;
+}
+
+#messages { color: red; font-weight: bold; }
+
+
+/*Add some content at the bottom of the video/page*/
+.content {
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #F0E6BB;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-left: 50%;
+    right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.ElecvsGas {
+    display: flex;
+    flex-direction: row;
+    font-size: 22px; !important
+}
+
+.gasContent {
+    padding-right: 20px;
+}
+
+.electricContent {
+    padding-left: 20px;
+}
+
+.wrapper {
+    text-align: center;
+    background: black;
+}
+
+.button {
+    position: absolute;
+    top: 90%;
+    right: 45%;
+    border: none;
+    background: #000;
+    color: #000;
+    font-size: 24px;
+}
+
+form {
+    display: inline-block;
+    padding: 2ex;
+    background-color: black;
+}
+
+body {
+     background-color: white;
+     font-family: Helvetica;
+}
+
+
+[type=submit] {
+    font-size: 1em;
+    font-weight: normal;
+    /*border: 1px solid purple;*/
+    /*border-radius: 0.5em;*/
+    /*background-color: #ed79df;*/
+}
+
+fieldset {
+    display: inline-block;
+}
+
+#iconlist {
+    list-style-type: none;  /* no bullets */
+    padding: 0px;
+}
+
+#iconlist li {
+    display: inline;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -100;
+}

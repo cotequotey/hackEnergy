@@ -1,0 +1,70 @@
+<!doctype html>
+
+<!-- https://vimeo.com/127826300 !--> 
+
+<head>
+    <meta charset="utf-8">
+    <meta name=author content="Angela and Jocelyn">
+    <meta name=description content="">
+    <meta name=keywords content="">
+    <title>Compute Car Costs</title>
+    <link rel="stylesheet" href="/static/styling.css">
+</head>
+<div class = "content">
+<body>
+    <!-- Code to implement flashing !--> 
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div id="messages">
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %} 
+    <h1> Enter the Following:</h1>
+    
+    {% if msg %}
+    <p>{{msg}}</p>
+    {% endif %}
+    
+    {% if cost %}
+    <p>The cost of a gas powered vehicle is {{cost}}</p>
+    {% endif %}
+    
+    
+<!--  Get request that uses post method !-->
+    <form method="post" action="">
+
+        <fieldset>
+            <legend>Your Gas Car Data</legend>
+            <table>
+                <tr><td><label for="num" accesskey="i"> Distance(MI):</label></td><td><input  type="number" name="distance" id="num" required></td></tr>
+                <tr><td><label for="num2" accesskey="n"> Price/gallon:</label></td><td><input  type="number" required name="price/gallon" id="num2"required></td></tr>
+                <tr><td><label for="num3" accesskey="b"> Miles/gallon(MPG):</label></td><td><input  type="number" name="miles/gallon" id="num3"required></td></tr>
+            </table>
+        </fieldset>
+            <p>
+            <div class="wrapper">
+                <button class="button"><input type='submit' value='Calculate cost'></button>
+            </div>
+        </p>
+
+    </form>
+    
+</div>
+
+    <!-- This a car vid !-->
+    <video autoplay muted loop id="myVideo">
+        <source src="../static/gas.mp4" type="video/mp4">
+    </video>
+
+    <script>
+    // Get the video
+    var video = document.getElementById("myVideo");
+    video.play();
+    </script>
+
+</body>
+</html>
+
